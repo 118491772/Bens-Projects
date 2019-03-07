@@ -1,29 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head>
-
-    <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-   
-    <style>
-    
-
-    {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
-
-/* Style the header */
-.header {
-  background-color: #f1f1f1;
-  padding: 20px;
-  text-align: center;
-}
-
-/* Style the top navigation bar */
+    <head>
+        <style>
+         /* Style the top navigation bar */
 .topnav {
   overflow: hidden;
   background-color: #333;
@@ -84,42 +63,51 @@ li a.active {
 
 li a:hover:not(.active) {
   background-color: #555;
-  color: Red;
+  color: green;
 }
 
-.left{
-    position: absolute;
-    top:400px;
-    left:100px;
-    width; 300px;
-    
-    padding: 10px;
-}
+
+
+
+
+
+
+
+
+
+
 </style>
-</head>
+    </head>
 <body>
-
-
-    <div class="header">
-  <h1>E-Business Consulting Services</h1>
-</div>
-
-<div class="topnav">
-  <a href="tiltedpage_scroll_demo.html">< Back</a>
+ 
+    
+    <div class="topnav">
+  <a href="ConsultingServices.html">Consulting Home</a>
     <a href="cv.html">Cv Home</a>
 
 </div>
     
-    <div class="left">
-    <img src="handshake.jpg" alt="Blockchain" style="width:300px;height:250px;">
-    </div>
     
+    <!-- //Starting the session to get the session variable from the last page-->
+    <div>
+        <?php
+        session_start();
+        $totalValue = $_POST['txtTotal'];
+        $fullNameVal = $_POST['txtName'];
+        $NumberVal = $_POST['txtNum'];
+        echo "The name is: ".$fullNameVal.".";
+        echo "<br></br>";
+        echo "The phone number is: ".$NumberVal.".";
+        echo "<br></br>";
+        echo "The total value is ".$totalValue.".";
+    ?>
+    </div>
 
-<ul>
-  <li><a href="AboutServices.html">About Service's</a></li>
-  <li><a href="ebusContactDets.html">Contact Details</a></li>
-  <li><a href="ebus1.php">Quotation Table</a></li>
-</ul>
+
+
 
 </body>
+
 </html>
+
+
